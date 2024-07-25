@@ -52,7 +52,6 @@ extension FeatureSwiftUIRouter {
 
 // MARK: - FeatureSwiftUI.Route
 extension FeatureSwiftUIRouter.InitialView {
-    
     @ViewBuilder func showScreen(_ route: FeatureSwiftUI.Route) -> some View {
         switch route {
         case .onPushSomthing:

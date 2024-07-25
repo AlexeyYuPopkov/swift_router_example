@@ -31,7 +31,6 @@ final class HomeVC: UIViewController, OnRouteProtocol {
         super.viewDidLoad()
         setup()
         setupSubscriptions()
-        setupAccessibilityIdentifiers()
     }
 
     override func viewDidLayoutSubviews() {
@@ -53,13 +52,6 @@ extension HomeVC {
         view.addSubview(tableView)
         
         applySnapshot()
-    }
-    
-    private func setupAccessibilityIdentifiers() {
-        view.accessibilityIdentifier = "HomeVC.AccessibilityId"
-//        label.accessibilityIdentifier = "Label.AccessibilityId"
-//        doSomethingButton.accessibilityIdentifier = "DoSomethingButton.AccessibilityId"
-//        logoutButton.accessibilityIdentifier = "SendButton.AccessibilityId"
     }
     
     private func setupSubscriptions() {

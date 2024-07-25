@@ -26,7 +26,7 @@
 		B2A978DB2C50FF92002042C9 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A978C52C50FF92002042C9 /* HomeVC.swift */; };
 		B2A978DC2C50FF92002042C9 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A978C72C50FF92002042C9 /* LoginVC.swift */; };
 		B2A978DD2C50FF92002042C9 /* OnRouteProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A978C92C50FF92002042C9 /* OnRouteProtocol.swift */; };
-		B2A978DE2C50FF92002042C9 /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A978CA2C50FF92002042C9 /* RootRouter.swift */; };
+		B2A978DE2C50FF92002042C9 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A978CA2C50FF92002042C9 /* LoginRouter.swift */; };
 		B2A978E22C510303002042C9 /* MBProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = B2A978E12C510303002042C9 /* MBProgressHUD */; };
 		B2A978E42C5105BA002042C9 /* Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A978E32C5105BA002042C9 /* Dependencies.swift */; };
 		B2A978E82C510A6D002042C9 /* HomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A978E72C510A6D002042C9 /* HomeVM.swift */; };
@@ -34,6 +34,7 @@
 		B2A978F02C522C6E002042C9 /* FeatureSwiftUIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A978EF2C522C6E002042C9 /* FeatureSwiftUIRouter.swift */; };
 		B2A978F22C52339B002042C9 /* FeatureSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A978F12C52339B002042C9 /* FeatureSwiftUI.swift */; };
 		B2A978F42C523DE3002042C9 /* AnotherFeatureSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A978F32C523DE3002042C9 /* AnotherFeatureSwiftUI.swift */; };
+		B2A978F82C527953002042C9 /* UnauthZoneFeatureVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A978F72C527953002042C9 /* UnauthZoneFeatureVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,13 +78,14 @@
 		B2A978C52C50FF92002042C9 /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		B2A978C72C50FF92002042C9 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		B2A978C92C50FF92002042C9 /* OnRouteProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnRouteProtocol.swift; sourceTree = "<group>"; };
-		B2A978CA2C50FF92002042C9 /* RootRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootRouter.swift; sourceTree = "<group>"; };
+		B2A978CA2C50FF92002042C9 /* LoginRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
 		B2A978E32C5105BA002042C9 /* Dependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependencies.swift; sourceTree = "<group>"; };
 		B2A978E72C510A6D002042C9 /* HomeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVM.swift; sourceTree = "<group>"; };
 		B2A978EC2C511738002042C9 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		B2A978EF2C522C6E002042C9 /* FeatureSwiftUIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureSwiftUIRouter.swift; sourceTree = "<group>"; };
 		B2A978F12C52339B002042C9 /* FeatureSwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureSwiftUI.swift; sourceTree = "<group>"; };
 		B2A978F32C523DE3002042C9 /* AnotherFeatureSwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnotherFeatureSwiftUI.swift; sourceTree = "<group>"; };
+		B2A978F72C527953002042C9 /* UnauthZoneFeatureVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnauthZoneFeatureVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -233,7 +235,6 @@
 			isa = PBXGroup;
 			children = (
 				B2A978C92C50FF92002042C9 /* OnRouteProtocol.swift */,
-				B2A978CA2C50FF92002042C9 /* RootRouter.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -269,6 +270,8 @@
 		B2A978EA2C511689002042C9 /* UnAuthZone */ = {
 			isa = PBXGroup;
 			children = (
+				B2A978F62C527929002042C9 /* UnauthZoneFeature */,
+				B2A978F52C525AAD002042C9 /* Router */,
 				B2A978C82C50FF92002042C9 /* LoginVC */,
 			);
 			path = UnAuthZone;
@@ -290,6 +293,22 @@
 				B2A978F32C523DE3002042C9 /* AnotherFeatureSwiftUI.swift */,
 			);
 			path = FeatureSwiftUI;
+			sourceTree = "<group>";
+		};
+		B2A978F52C525AAD002042C9 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				B2A978CA2C50FF92002042C9 /* LoginRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		B2A978F62C527929002042C9 /* UnauthZoneFeature */ = {
+			isa = PBXGroup;
+			children = (
+				B2A978F72C527953002042C9 /* UnauthZoneFeatureVC.swift */,
+			);
+			path = UnauthZoneFeature;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -428,8 +447,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2A978F82C527953002042C9 /* UnauthZoneFeatureVC.swift in Sources */,
 				B2A978DD2C50FF92002042C9 /* OnRouteProtocol.swift in Sources */,
-				B2A978DE2C50FF92002042C9 /* RootRouter.swift in Sources */,
+				B2A978DE2C50FF92002042C9 /* LoginRouter.swift in Sources */,
 				B2A978DC2C50FF92002042C9 /* LoginVC.swift in Sources */,
 				B2A978F02C522C6E002042C9 /* FeatureSwiftUIRouter.swift in Sources */,
 				B2A978E42C5105BA002042C9 /* Dependencies.swift in Sources */,
