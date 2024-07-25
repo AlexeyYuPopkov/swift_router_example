@@ -9,13 +9,31 @@
 /* Begin PBXBuildFile section */
 		B2A977F12C50E8A5002042C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A977F02C50E8A5002042C9 /* AppDelegate.swift */; };
 		B2A977F32C50E8A5002042C9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A977F22C50E8A5002042C9 /* SceneDelegate.swift */; };
-		B2A977F52C50E8A5002042C9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A977F42C50E8A5002042C9 /* ViewController.swift */; };
-		B2A977F82C50E8A5002042C9 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = B2A977F72C50E8A5002042C9 /* Base */; };
 		B2A977FA2C50E8A6002042C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2A977F92C50E8A6002042C9 /* Assets.xcassets */; };
 		B2A977FD2C50E8A6002042C9 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = B2A977FC2C50E8A6002042C9 /* Base */; };
 		B2A978082C50E8A6002042C9 /* router_exampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A978072C50E8A6002042C9 /* router_exampleTests.swift */; };
 		B2A978122C50E8A6002042C9 /* router_exampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A978112C50E8A6002042C9 /* router_exampleUITests.swift */; };
 		B2A978142C50E8A6002042C9 /* router_exampleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A978132C50E8A6002042C9 /* router_exampleUITestsLaunchTests.swift */; };
+		B2A978CD2C50FF92002042C9 /* SomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A978B22C50FF92002042C9 /* SomeModel.swift */; };
+		B2A978CE2C50FF92002042C9 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A978B32C50FF92002042C9 /* Token.swift */; };
+		B2A978CF2C50FF92002042C9 /* AuthStatusProviderUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A978B52C50FF92002042C9 /* AuthStatusProviderUsecase.swift */; };
+		B2A978D12C50FF92002042C9 /* LoginUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A978B72C50FF92002042C9 /* LoginUsecase.swift */; };
+		B2A978D22C50FF92002042C9 /* LogoutUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A978B82C50FF92002042C9 /* LogoutUsecase.swift */; };
+		B2A978D32C50FF92002042C9 /* AuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A978BA2C50FF92002042C9 /* AuthRepository.swift */; };
+		B2A978D52C50FF92002042C9 /* TokenRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A978BC2C50FF92002042C9 /* TokenRepository.swift */; };
+		B2A978D62C50FF92002042C9 /* AuthRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A978BE2C50FF92002042C9 /* AuthRepositoryImpl.swift */; };
+		B2A978D82C50FF92002042C9 /* TokenRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A978C02C50FF92002042C9 /* TokenRepositoryImpl.swift */; };
+		B2A978DB2C50FF92002042C9 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A978C52C50FF92002042C9 /* HomeVC.swift */; };
+		B2A978DC2C50FF92002042C9 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A978C72C50FF92002042C9 /* LoginVC.swift */; };
+		B2A978DD2C50FF92002042C9 /* OnRouteProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A978C92C50FF92002042C9 /* OnRouteProtocol.swift */; };
+		B2A978DE2C50FF92002042C9 /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A978CA2C50FF92002042C9 /* RootRouter.swift */; };
+		B2A978E22C510303002042C9 /* MBProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = B2A978E12C510303002042C9 /* MBProgressHUD */; };
+		B2A978E42C5105BA002042C9 /* Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A978E32C5105BA002042C9 /* Dependencies.swift */; };
+		B2A978E82C510A6D002042C9 /* HomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A978E72C510A6D002042C9 /* HomeVM.swift */; };
+		B2A978ED2C511738002042C9 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A978EC2C511738002042C9 /* HomeRouter.swift */; };
+		B2A978F02C522C6E002042C9 /* FeatureSwiftUIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A978EF2C522C6E002042C9 /* FeatureSwiftUIRouter.swift */; };
+		B2A978F22C52339B002042C9 /* FeatureSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A978F12C52339B002042C9 /* FeatureSwiftUI.swift */; };
+		B2A978F42C523DE3002042C9 /* AnotherFeatureSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A978F32C523DE3002042C9 /* AnotherFeatureSwiftUI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +57,6 @@
 		B2A977ED2C50E8A5002042C9 /* router_example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = router_example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2A977F02C50E8A5002042C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2A977F22C50E8A5002042C9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B2A977F42C50E8A5002042C9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B2A977F72C50E8A5002042C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B2A977F92C50E8A6002042C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B2A977FC2C50E8A6002042C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B2A977FE2C50E8A6002042C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +65,25 @@
 		B2A9780D2C50E8A6002042C9 /* router_exampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = router_exampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2A978112C50E8A6002042C9 /* router_exampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = router_exampleUITests.swift; sourceTree = "<group>"; };
 		B2A978132C50E8A6002042C9 /* router_exampleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = router_exampleUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B2A978B22C50FF92002042C9 /* SomeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SomeModel.swift; sourceTree = "<group>"; };
+		B2A978B32C50FF92002042C9 /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
+		B2A978B52C50FF92002042C9 /* AuthStatusProviderUsecase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthStatusProviderUsecase.swift; sourceTree = "<group>"; };
+		B2A978B72C50FF92002042C9 /* LoginUsecase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginUsecase.swift; sourceTree = "<group>"; };
+		B2A978B82C50FF92002042C9 /* LogoutUsecase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogoutUsecase.swift; sourceTree = "<group>"; };
+		B2A978BA2C50FF92002042C9 /* AuthRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthRepository.swift; sourceTree = "<group>"; };
+		B2A978BC2C50FF92002042C9 /* TokenRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenRepository.swift; sourceTree = "<group>"; };
+		B2A978BE2C50FF92002042C9 /* AuthRepositoryImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthRepositoryImpl.swift; sourceTree = "<group>"; };
+		B2A978C02C50FF92002042C9 /* TokenRepositoryImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenRepositoryImpl.swift; sourceTree = "<group>"; };
+		B2A978C52C50FF92002042C9 /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		B2A978C72C50FF92002042C9 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		B2A978C92C50FF92002042C9 /* OnRouteProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnRouteProtocol.swift; sourceTree = "<group>"; };
+		B2A978CA2C50FF92002042C9 /* RootRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootRouter.swift; sourceTree = "<group>"; };
+		B2A978E32C5105BA002042C9 /* Dependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependencies.swift; sourceTree = "<group>"; };
+		B2A978E72C510A6D002042C9 /* HomeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVM.swift; sourceTree = "<group>"; };
+		B2A978EC2C511738002042C9 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		B2A978EF2C522C6E002042C9 /* FeatureSwiftUIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureSwiftUIRouter.swift; sourceTree = "<group>"; };
+		B2A978F12C52339B002042C9 /* FeatureSwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureSwiftUI.swift; sourceTree = "<group>"; };
+		B2A978F32C523DE3002042C9 /* AnotherFeatureSwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnotherFeatureSwiftUI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2A978E22C510303002042C9 /* MBProgressHUD in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +119,7 @@
 				B2A978062C50E8A6002042C9 /* router_exampleTests */,
 				B2A978102C50E8A6002042C9 /* router_exampleUITests */,
 				B2A977EE2C50E8A5002042C9 /* Products */,
+				B2A978E02C510303002042C9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,10 +136,11 @@
 		B2A977EF2C50E8A5002042C9 /* router_example */ = {
 			isa = PBXGroup;
 			children = (
+				B2A978C12C50FF92002042C9 /* Data */,
+				B2A978BD2C50FF92002042C9 /* Domain */,
+				B2A978CC2C50FF92002042C9 /* Presentation */,
 				B2A977F02C50E8A5002042C9 /* AppDelegate.swift */,
 				B2A977F22C50E8A5002042C9 /* SceneDelegate.swift */,
-				B2A977F42C50E8A5002042C9 /* ViewController.swift */,
-				B2A977F62C50E8A5002042C9 /* Main.storyboard */,
 				B2A977F92C50E8A6002042C9 /* Assets.xcassets */,
 				B2A977FB2C50E8A6002042C9 /* LaunchScreen.storyboard */,
 				B2A977FE2C50E8A6002042C9 /* Info.plist */,
@@ -127,6 +165,133 @@
 			path = router_exampleUITests;
 			sourceTree = "<group>";
 		};
+		B2A978B42C50FF92002042C9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B2A978B22C50FF92002042C9 /* SomeModel.swift */,
+				B2A978B32C50FF92002042C9 /* Token.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B2A978B92C50FF92002042C9 /* Usecases */ = {
+			isa = PBXGroup;
+			children = (
+				B2A978B52C50FF92002042C9 /* AuthStatusProviderUsecase.swift */,
+				B2A978B72C50FF92002042C9 /* LoginUsecase.swift */,
+				B2A978B82C50FF92002042C9 /* LogoutUsecase.swift */,
+			);
+			path = Usecases;
+			sourceTree = "<group>";
+		};
+		B2A978BD2C50FF92002042C9 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				B2A978B42C50FF92002042C9 /* Model */,
+				B2A978B92C50FF92002042C9 /* Usecases */,
+				B2A978BA2C50FF92002042C9 /* AuthRepository.swift */,
+				B2A978BC2C50FF92002042C9 /* TokenRepository.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		B2A978C12C50FF92002042C9 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				B2A978BE2C50FF92002042C9 /* AuthRepositoryImpl.swift */,
+				B2A978C02C50FF92002042C9 /* TokenRepositoryImpl.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		B2A978C42C50FF92002042C9 /* Di */ = {
+			isa = PBXGroup;
+			children = (
+				B2A978E32C5105BA002042C9 /* Dependencies.swift */,
+			);
+			path = Di;
+			sourceTree = "<group>";
+		};
+		B2A978C62C50FF92002042C9 /* HomeVC */ = {
+			isa = PBXGroup;
+			children = (
+				B2A978C52C50FF92002042C9 /* HomeVC.swift */,
+				B2A978E72C510A6D002042C9 /* HomeVM.swift */,
+			);
+			path = HomeVC;
+			sourceTree = "<group>";
+		};
+		B2A978C82C50FF92002042C9 /* LoginVC */ = {
+			isa = PBXGroup;
+			children = (
+				B2A978C72C50FF92002042C9 /* LoginVC.swift */,
+			);
+			path = LoginVC;
+			sourceTree = "<group>";
+		};
+		B2A978CB2C50FF92002042C9 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				B2A978C92C50FF92002042C9 /* OnRouteProtocol.swift */,
+				B2A978CA2C50FF92002042C9 /* RootRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		B2A978CC2C50FF92002042C9 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				B2A978EA2C511689002042C9 /* UnAuthZone */,
+				B2A978E92C51167F002042C9 /* AuthZone */,
+				B2A978C42C50FF92002042C9 /* Di */,
+				B2A978CB2C50FF92002042C9 /* Router */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		B2A978E02C510303002042C9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B2A978E92C51167F002042C9 /* AuthZone */ = {
+			isa = PBXGroup;
+			children = (
+				B2A978EE2C522645002042C9 /* FeatureSwiftUI */,
+				B2A978EB2C511725002042C9 /* Routers */,
+				B2A978C62C50FF92002042C9 /* HomeVC */,
+			);
+			path = AuthZone;
+			sourceTree = "<group>";
+		};
+		B2A978EA2C511689002042C9 /* UnAuthZone */ = {
+			isa = PBXGroup;
+			children = (
+				B2A978C82C50FF92002042C9 /* LoginVC */,
+			);
+			path = UnAuthZone;
+			sourceTree = "<group>";
+		};
+		B2A978EB2C511725002042C9 /* Routers */ = {
+			isa = PBXGroup;
+			children = (
+				B2A978EC2C511738002042C9 /* HomeRouter.swift */,
+				B2A978EF2C522C6E002042C9 /* FeatureSwiftUIRouter.swift */,
+			);
+			path = Routers;
+			sourceTree = "<group>";
+		};
+		B2A978EE2C522645002042C9 /* FeatureSwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				B2A978F12C52339B002042C9 /* FeatureSwiftUI.swift */,
+				B2A978F32C523DE3002042C9 /* AnotherFeatureSwiftUI.swift */,
+			);
+			path = FeatureSwiftUI;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +308,9 @@
 			dependencies = (
 			);
 			name = router_example;
+			packageProductDependencies = (
+				B2A978E12C510303002042C9 /* MBProgressHUD */,
+			);
 			productName = router_example;
 			productReference = B2A977ED2C50E8A5002042C9 /* router_example.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +383,9 @@
 				Base,
 			);
 			mainGroup = B2A977E42C50E8A5002042C9;
+			packageReferences = (
+				B2A978DF2C5102ED002042C9 /* XCRemoteSwiftPackageReference "MBProgressHUD" */,
+			);
 			productRefGroup = B2A977EE2C50E8A5002042C9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -233,7 +404,6 @@
 			files = (
 				B2A977FA2C50E8A6002042C9 /* Assets.xcassets in Resources */,
 				B2A977FD2C50E8A6002042C9 /* Base in Resources */,
-				B2A977F82C50E8A5002042C9 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +428,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B2A977F52C50E8A5002042C9 /* ViewController.swift in Sources */,
+				B2A978DD2C50FF92002042C9 /* OnRouteProtocol.swift in Sources */,
+				B2A978DE2C50FF92002042C9 /* RootRouter.swift in Sources */,
+				B2A978DC2C50FF92002042C9 /* LoginVC.swift in Sources */,
+				B2A978F02C522C6E002042C9 /* FeatureSwiftUIRouter.swift in Sources */,
+				B2A978E42C5105BA002042C9 /* Dependencies.swift in Sources */,
+				B2A978DB2C50FF92002042C9 /* HomeVC.swift in Sources */,
+				B2A978D82C50FF92002042C9 /* TokenRepositoryImpl.swift in Sources */,
+				B2A978CE2C50FF92002042C9 /* Token.swift in Sources */,
+				B2A978E82C510A6D002042C9 /* HomeVM.swift in Sources */,
 				B2A977F12C50E8A5002042C9 /* AppDelegate.swift in Sources */,
+				B2A978D32C50FF92002042C9 /* AuthRepository.swift in Sources */,
 				B2A977F32C50E8A5002042C9 /* SceneDelegate.swift in Sources */,
+				B2A978CF2C50FF92002042C9 /* AuthStatusProviderUsecase.swift in Sources */,
+				B2A978F22C52339B002042C9 /* FeatureSwiftUI.swift in Sources */,
+				B2A978D22C50FF92002042C9 /* LogoutUsecase.swift in Sources */,
+				B2A978CD2C50FF92002042C9 /* SomeModel.swift in Sources */,
+				B2A978D62C50FF92002042C9 /* AuthRepositoryImpl.swift in Sources */,
+				B2A978D52C50FF92002042C9 /* TokenRepository.swift in Sources */,
+				B2A978D12C50FF92002042C9 /* LoginUsecase.swift in Sources */,
+				B2A978F42C523DE3002042C9 /* AnotherFeatureSwiftUI.swift in Sources */,
+				B2A978ED2C511738002042C9 /* HomeRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +485,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		B2A977F62C50E8A5002042C9 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B2A977F72C50E8A5002042C9 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B2A977FB2C50E8A6002042C9 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -447,9 +627,9 @@
 				INFOPLIST_FILE = router_example/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -475,9 +655,9 @@
 				INFOPLIST_FILE = router_example/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -607,6 +787,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B2A978DF2C5102ED002042C9 /* XCRemoteSwiftPackageReference "MBProgressHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jdg/MBProgressHUD.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B2A978E12C510303002042C9 /* MBProgressHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B2A978DF2C5102ED002042C9 /* XCRemoteSwiftPackageReference "MBProgressHUD" */;
+			productName = MBProgressHUD;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B2A977E52C50E8A5002042C9 /* Project object */;
 }
