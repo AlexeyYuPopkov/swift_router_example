@@ -1,5 +1,5 @@
 //
-//  FeatureSwiftUIRouter.swift
+//  SwiftUIRouter.swift
 //  router_example
 //
 //  Created by Алексей Попков on 25.07.2024.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-final class FeatureSwiftUIRouter: ObservableObject, OnRouteProtocol {
+final class SwiftUIRouter: ObservableObject, OnRouteProtocol {
     enum Route {
         case onBack
     }
@@ -21,27 +21,27 @@ final class FeatureSwiftUIRouter: ObservableObject, OnRouteProtocol {
     }
 }
 
-extension FeatureSwiftUIRouter {
+extension SwiftUIRouter {
     struct InitialView: View {
-        @StateObject var router: FeatureSwiftUIRouter
-        @State var modalView: FeatureSwiftUI.Route?
+        @StateObject var router: SwiftUIRouter
+        @State var modalView: TestScreenSwiftUI.Route?
         
         var body: some View {
             NavigationStack(path: $router.path) {
-                FeatureSwiftUI(
+                TestScreenSwiftUI(
                     isModal: true,
                     onRoute: {
                     switch $0 {
-                    case .onPushSomthing:
+                    case .onPushAnotherTestScreen:
                         router.path.append($0)
-                    case .onPresentSomthing:
+                    case .onPresentAnotherTestScreen:
                         modalView = $0
                     case .onBack:
                         self.router.onRoute?(.onBack)
                     }
                 }
                 )
-                .navigationDestination(for: FeatureSwiftUI.Route.self, destination: showScreen)
+                .navigationDestination(for: TestScreenSwiftUI.Route.self, destination: showScreen)
                 .sheet(item: $modalView, // or .fullScreenCover
                        onDismiss: { modalView = nil },
                        content: showScreen)
@@ -51,13 +51,13 @@ extension FeatureSwiftUIRouter {
 }
 
 // MARK: - FeatureSwiftUI.Route
-extension FeatureSwiftUIRouter.InitialView {
-    @ViewBuilder func showScreen(_ route: FeatureSwiftUI.Route) -> some View {
+extension SwiftUIRouter.InitialView {
+    @ViewBuilder func showScreen(_ route: TestScreenSwiftUI.Route) -> some View {
         switch route {
-        case .onPushSomthing:
-            AnotherFeatureSwiftUI()
-        case .onPresentSomthing:
-            AnotherFeatureSwiftUI()
+        case .onPushAnotherTestScreen:
+            AnotherTestScreenSwiftUI()
+        case .onPresentAnotherTestScreen:
+            AnotherTestScreenSwiftUI()
         case .onBack:
             fatalError("Impossible case")
         }

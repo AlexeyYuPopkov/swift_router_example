@@ -1,5 +1,5 @@
 //
-//  FeatureSwiftUI.swift
+//  TestScreenSwiftUI.swift
 //  router_example
 //
 //  Created by Алексей Попков on 25.07.2024.
@@ -7,25 +7,25 @@
 
 import SwiftUI
 
-struct FeatureSwiftUI: View, OnRouteProtocol {
+struct TestScreenSwiftUI: View, OnRouteProtocol {
     let isModal: Bool
     var onRoute: ((Route) -> Void)?
     
     var body: some View {
         List(content: {
                 Button {
-                    onRoute?(.onPushSomthing)
+                    onRoute?(.onPushAnotherTestScreen)
                 } label: {
-                    Text("Push somthing")
+                    Text("Push Another Test Screen")
                 }
                 Button {
-                    onRoute?(.onPresentSomthing)
+                    onRoute?(.onPresentAnotherTestScreen)
                 } label: {
-                    Text("Present somthing")
+                    Text("Present Another Test Screen")
                 }
         })
         .navigationBarTitleDisplayMode(.inline)
-        .navigationTitle(Text("Feature (SwiftUI)"))
+        .navigationTitle(Text("Test Screen (SwiftUI)"))
             .toolbar(content: {
                 if (isModal)
                 {
@@ -40,24 +40,22 @@ struct FeatureSwiftUI: View, OnRouteProtocol {
                 }
             })
     }
-    
- 
 }
 
-extension FeatureSwiftUI {
+extension TestScreenSwiftUI {
     enum Route: String, Identifiable {
-        case onPushSomthing
-        case onPresentSomthing
+        case onPushAnotherTestScreen
+        case onPresentAnotherTestScreen
         case onBack
     }
 }
 
-extension FeatureSwiftUI.Route {
+extension TestScreenSwiftUI.Route {
     var id: String {
         return rawValue
     }
 }
 
 #Preview {
-    FeatureSwiftUI(isModal: true)
+    TestScreenSwiftUI(isModal: true)
 }

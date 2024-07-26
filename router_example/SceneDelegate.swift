@@ -13,10 +13,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
 
-         let window = UIWindow(windowScene: windowScene)
-//         let router = LoginRouter(window: window)
-        
-        let router = HomeRouter(dependencies: DependenciesImpl(), onRoute: nil)
+        let window = UIWindow(windowScene: windowScene)
+
+        let router = HomeRouter()
         
          let vc = router.initialScreen()
          window.rootViewController = vc
