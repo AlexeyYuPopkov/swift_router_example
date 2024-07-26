@@ -14,7 +14,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
 
          let window = UIWindow(windowScene: windowScene)
-        let router = LoginRouter(window: window)
+//         let router = LoginRouter(window: window)
+        
+        let router = HomeRouter(dependencies: DependenciesImpl(), onRoute: nil)
         
          let vc = router.initialScreen()
          window.rootViewController = vc

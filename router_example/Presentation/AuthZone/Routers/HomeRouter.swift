@@ -22,7 +22,8 @@ final class HomeRouter: OnRouteProtocol {
 extension HomeRouter {
     func initialScreen() -> UIViewController {
         let vc = createInitialScreen()
-        return vc
+        let nc = UINavigationController(rootViewController: vc)
+        return nc
     }
 }
 
@@ -70,49 +71,44 @@ extension HomeRouter {
 
 // MARK: - Push SwiftUI Feature
 extension HomeRouter {
+    
+    final class Box {
+        weak var vc: UIViewController!
+    }
+    
     private func pushFeatureSwiftUI(_ sender: UIViewController) {
-        let vc = UIHostingController(rootView: PushFeatureSwiftUIInitialView(sender: sender))
+        let box = Box()
+        
+        let vc = UIHostingController(rootView:
+                                        FeatureSwiftUI(
+                                            isModal: false,
+                                            onRoute: {
+                                                switch $0 {
+                                                case .onPushSomthing:
+                                                    self.pushPushSomthingScreen(sender: box)
+                                                    break
+                                                case .onPresentSomthing:
+                                                    self.presentPushSomthingScreen(sender: box)
+                                                case .onBack:
+                                                    break
+                                                }
+                                            }
+                                        )
+        )
+        
+        box.vc = vc
+        
         sender.navigationController?.pushViewController(vc, animated: true)
     }
     
-    struct PushFeatureSwiftUIInitialView: View {
-        let sender: UIViewController
-        
-        @State var modalView: FeatureSwiftUI.Route?
-        
-        var body: some View {
-                FeatureSwiftUI(
-                    isModal: false,
-                    onRoute: {
-                    switch $0 {
-                    case .onPushSomthing:
-                        pushPushSomthingScreen()
-                        break
-                    case .onPresentSomthing:
-                        modalView = $0
-                    case .onBack:
-                        break
-                    }
-                }
-                )
-                .sheet(item: $modalView, // or .fullScreenCover
-                       onDismiss: { modalView = nil },
-                       content: showScreen)
-        }
-        
-        func pushPushSomthingScreen() {
-            let vc = UIHostingController(rootView: AnotherFeatureSwiftUI())
-            sender.navigationController?.pushViewController(vc, animated: true)
-        }
-        
-        @ViewBuilder func showScreen(_ route: FeatureSwiftUI.Route) -> some View {
-            switch route {
-            case .onPresentSomthing:
-                AnotherFeatureSwiftUI()
-            case .onPushSomthing, .onBack:
-                fatalError("Impossible case")
-            }
-        }
+    private func pushPushSomthingScreen(sender: Box) {
+        let vc = UIHostingController(rootView: AnotherFeatureSwiftUI())
+        sender.vc.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    private func presentPushSomthingScreen(sender: Box) {
+        let vc = UIHostingController(rootView: AnotherFeatureSwiftUI())
+        sender.vc.present(vc, animated: true)
     }
 }
 

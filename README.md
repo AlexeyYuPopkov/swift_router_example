@@ -49,6 +49,8 @@ extension ViewController {
 
 Note that `ViewController` does not contain any navigation logic and does not know anything about the screens it transitions to.
 
-Now, let's dive into the `Router` implementation.
+Now, let's dive into the `Router` implementation. 
+
+[video](url) 
 
 
