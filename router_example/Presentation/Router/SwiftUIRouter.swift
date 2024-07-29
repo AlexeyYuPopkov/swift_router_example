@@ -8,6 +8,7 @@
 import SwiftUI
 
 final class SwiftUIRouter: ObservableObject, OnRouteProtocol {
+    // 1
     enum Route {
         case onBack
     }
@@ -16,12 +17,14 @@ final class SwiftUIRouter: ObservableObject, OnRouteProtocol {
     
     @Published var path = NavigationPath()
     
+    // 2
     func initialScreen() -> UIViewController {
         return UIHostingController(rootView: InitialView(router: self))
     }
 }
 
 extension SwiftUIRouter {
+    // 4
     struct InitialView: View {
         @StateObject var router: SwiftUIRouter
         @State var modalView: TestScreenSwiftUI.Route?

@@ -10,17 +10,22 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
 
+    /// Here we are:
+    /// 1. Creating an instance of `HomeRouter`, which is responsible for managing navigation.
+    /// 2. Using the router to get the initial view controller that should be displayed.
+    /// 3. Setting the `rootViewController` of the window to the initial view controller.
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
-
-        let window = UIWindow(windowScene: windowScene)
-
-        let router = HomeRouter()
         
-         let vc = router.initialScreen()
-         window.rootViewController = vc
-         self.window = window
-         window.makeKeyAndVisible()
+        let window = UIWindow(windowScene: windowScene)
+        // 1
+        let router = HomeRouter()
+        // 2
+        let vc = router.initialScreen()
+        // 3
+        window.rootViewController = vc
+        self.window = window
+        window.makeKeyAndVisible()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

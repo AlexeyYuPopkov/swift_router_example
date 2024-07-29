@@ -9,6 +9,7 @@ import UIKit
 import SwiftUI
 
 final class HomeRouter {
+    // 1
     func initialScreen() -> UIViewController {
         let vc = createInitialScreen()
         let nc = UINavigationController(rootViewController: vc)
@@ -18,17 +19,18 @@ final class HomeRouter {
 
 extension HomeRouter {
     private func createInitialScreen() -> UIViewController {
+        // 2
         let vc = HomeVC(nibName: nil, bundle: nil)
-
+        // 3
         vc.onRoute = {
             switch $0 {
             case .pushTestScreenUIKit(let sender):
                 self.pushTestScreenUIKit(sender)
             case .presentTestScreenUIKit(let sender):
                 self.presentTestScreenUIKit(sender)
-            case .onPushFeatureSwiftUI(let sender):
+            case .onPushTestScreenSwiftUI(let sender):
                 self.pushTestScreenSwiftUI(sender)
-            case .onPresentFeatureSwiftUI(let sender):
+            case .onPresentTestScreenSwiftUI(let sender):
                 self.presentTestScreenSwiftUI(sender)
             }
         }
@@ -38,6 +40,7 @@ extension HomeRouter {
 }
 
 // MARK: - Push and Present Test Screen UIKit
+// 4
 extension HomeRouter {
     private func pushTestScreenUIKit(_ sender: UIViewController) {
         let vc = TestScreenUIKit(nibName: nil, bundle: nil)
@@ -75,6 +78,7 @@ extension HomeRouter {
         
         let vc = UIHostingController(rootView: view)
         
+        // 5
         box.vc = vc
         
         sender.navigationController?.pushViewController(vc, animated: true)
@@ -94,11 +98,14 @@ extension HomeRouter {
 // MARK: - Present SwiftUI Feature
 extension HomeRouter {
     private func presentTestScreenSwiftUI(_ sender: UIViewController) {
+        // 6
         let router = SwiftUIRouter()
         
+        // 7
         let vc = router.initialScreen()
         vc.modalPresentationStyle = .fullScreen
         
+        // 8
         router.onRoute = { [weak vc] in
             switch $0 {
             case .onBack:

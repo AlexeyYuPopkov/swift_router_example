@@ -130,9 +130,9 @@ extension HomeVC: UITableViewDelegate {
         case .presentTestScreenUIKit:
             onRoute?(.presentTestScreenUIKit(self))
         case .pushTestScreenSwiftUI:
-            onRoute?(.onPushFeatureSwiftUI(self))
+            onRoute?(.onPushTestScreenSwiftUI(self))
         case .presentTestScreenSwiftUI:
-            onRoute?(.onPresentFeatureSwiftUI(self))
+            onRoute?(.onPresentTestScreenSwiftUI(self))
         }
     }
 }
@@ -142,7 +142,7 @@ extension HomeVC {
     enum Route {
         case pushTestScreenUIKit(_ sender: UIViewController)
         case presentTestScreenUIKit(_ sender: UIViewController)
-        case onPresentFeatureSwiftUI(_ sender: UIViewController)
-        case onPushFeatureSwiftUI(_ sender: UIViewController)
+        case onPresentTestScreenSwiftUI(_ sender: UIViewController)
+        case onPushTestScreenSwiftUI(_ sender: UIViewController)
     }
 }
