@@ -50,7 +50,7 @@ extension ViewController {
 In this example, to perform a transition to another screen, we call the `onRoute` closure with the relevant `Route` case. If necessary, this case can include any parameters needed by the next screen. Notably, `ViewController` does not contain any navigation logic and does not know anything about the screens it transitions to.
 
 
-Now, let's dive into the `Router` implementation. The [video bellow](https://alexeyyupopkov.github.io/swift_router_example/router_example.mov) demonstrates the behavior we aim to achieve.
+Now, let's dive into the `Router` implementation. The [video](https://alexeyyupopkov.github.io/swift_router_example/router_example.mov) demonstrates the behavior we aim to achieve.
 
 Let's start with the `SceneDelegate`:
 
